@@ -6,13 +6,23 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
+
+  {{> auth}}
+
+
 </body>
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
 
-   <div id="authorize-div" style="display: none">
+ 
+  
+</template>
+
+
+<template name="auth">
+    <div id="authorize-div" style="display: none;">
       <span>Authorize access to Google Calendar API</span>
       <!--Button for the user to click to initiate auth sequence -->
       <button id="authorize-button" onclick="handleAuthClick(event)">
@@ -20,5 +30,4 @@
       </button>
     </div>
     <pre id="output"></pre>
-  
 </template>
